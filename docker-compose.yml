@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  babel:
+    image: babel
+    build:
+      context: codemods/babel-plugin-codemod-optional-catch-binding/test
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
